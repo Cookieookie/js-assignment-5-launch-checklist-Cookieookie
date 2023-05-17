@@ -38,6 +38,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let fuelStatus = document.getElementById("fuelStatus");
     let cargoStatus = document.getElementById("cargoStatus");
     let launchStatus = document.getElementById("launchStatus");
+
     // Validating Correct type of information with an alert
     if (validateInput(pilot.value) === "Is a Number"
     || validateInput(copilot.value) === "Is a Number"
@@ -87,7 +88,6 @@ async function myFetch() {
     let planetsReturned;
 
     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
-        console.log(response)     
         return response.json();
     });
     console.log(planetsReturned);
